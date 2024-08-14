@@ -1,7 +1,7 @@
 # Melanoma Detection Assignment
 > Problem statement: To build a CNN based model which can accurately detect melanoma. Melanoma is a type of cancer that can be deadly if not detected early. It accounts for 75% of skin cancer deaths. A solution that can evaluate images and alert dermatologists about the presence of melanoma has the potential to reduce a lot of manual effort needed in diagnosis.
 
-The dataset consists of 2357 images of malignant and benign oncological diseases, which were formed from the International Skin Imaging Collaboration (ISIC). All images were sorted according to the classification taken with ISIC, and all subsets were divided into the same number of images, with the exception of melanomas and moles, whose images are slightly dominant.
+The dataset consists of images of malignant and benign oncological diseases, which were formed from the International Skin Imaging Collaboration (ISIC). All images were sorted according to the classification taken with ISIC, and all subsets were divided into the same number of images, with the exception of melanomas and moles, whose images are slightly dominant.
 
 
 The data set contains the following nine diseases:
@@ -38,23 +38,16 @@ For this project, we are utilizing a comprehensive dataset of skin images that i
 ## Model Architecture
 The CNN model architecture consists of multiple convolutional and pooling layers followed by fully connected layers. The architecture was designed to learn relevant features from the images for accurate classification.
 
-![Model Architecture](images/model_architecture.png)
-Figure 1: CNN model architecture for melanoma detection.
-
 ## Conclusions
 1. **Model Training Progress**:
-   - The model was trained for 28 epochs before early stopping was triggered.
+   - The model was trained for 30 epochs before early stopping was triggered.
    - The training loss decreased progressively over the epochs, indicating the model's learning and convergence.
-   - Training accuracy improved with each epoch, reaching approximately 91.18% by the end.
+   
 
 2. **Validation Performance**:
    - The validation accuracy improved consistently with each epoch, peaking at around 92.28%.
    - Validation loss decreased as the model learned, highlighting its ability to generalize well on unseen data.
    
-![Model Accuracy and Loss](images/model_accuracy_loss.png)
-Figure 2: Model accuracy and loss during training and validation.
-
-
 3. **Model Generalization**:
    - The model demonstrated strong generalization, as evidenced by the consistent improvement in validation accuracy and reduction in validation loss.
    - These results suggest that the model effectively learned relevant features from the training data and successfully applied them to new images.
@@ -93,12 +86,11 @@ Overall, the trained CNN model demonstrates promising results in accurately clas
 - NumPy: A library for numerical computations in Python, used for working with arrays and mathematical operations.
 - PIL (Pillow): Python Imaging Library, used for loading and manipulating images.
 - Augmentor: A library for data augmentation, used for generating augmented images.
-- Seaborn: A statistical data visualization library based on Matplotlib, used for creating bar plots.
 - Google Colab: An online platform for writing and executing Python code, often used for data analysis and machine learning.
 
 <!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
 
-## Acknowledgements
+
 - This project was inspired by the need for efficient melanoma detection.
 - The "Skin cancer ISIC The International Skin Imaging Collaboration" dataset was used for training and evaluation.
 - The project drew insights from various sources to develop an effective CNN model.
